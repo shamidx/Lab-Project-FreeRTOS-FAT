@@ -54,7 +54,7 @@
  *
  * Set to 0 not to use a CWD, in which case full paths must be used for each
  * file access. */
-    #define ffconfigHAS_CWD    0
+    #define ffconfigHAS_CWD    1
 
     #if !defined( ffconfigCWD_THREAD_LOCAL_INDEX )
         #error ffconfigCWD_THREAD_LOCAL_INDEX must be set to a free position within FreeRTOSs thread local storage pointer array for storage of a pointer to the CWD structure.
@@ -238,7 +238,7 @@
  *
  * Set to 0 to find these two values when they	are first needed.  Determining
  * the values can take some time. */
-    #define ffconfigMOUNT_FIND_FREE    0
+    #define ffconfigMOUNT_FIND_FREE    1
 #endif
 
 #if !defined( ffconfigFSINFO_TRUSTED )
@@ -247,7 +247,7 @@
  * ulFreeClusterCount fields.
  *
  * Set to 0 not to 'trust' these fields.*/
-    #define ffconfigFSINFO_TRUSTED    0
+    #define ffconfigFSINFO_TRUSTED    1
 #endif
 
 #if !defined( ffconfigFINDAPI_ALLOW_WILDCARDS )
@@ -489,7 +489,7 @@
 
 /* A rarely used feature of FreeRTOS+FAT which lets files behave
  * as 'devices'. */
-    #define ffconfigDEV_SUPPORT    0
+    #define ffconfigDEV_SUPPORT    1
 #endif
 
 #ifndef USE_SOFT_WDT
