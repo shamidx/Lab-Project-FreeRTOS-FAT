@@ -27,7 +27,7 @@
 /*
  * SPDX-FileCopyrightText: Copyright (C) 2025 Altera Corporation
  *
- * SPDX-License-Identifier: MIT-0
+ * SPDX-License-Identifier: MIT
  *
  * Modifications to support SoC FPGA
  */

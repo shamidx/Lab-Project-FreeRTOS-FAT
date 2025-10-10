@@ -1,3 +1,8 @@
+/*
+ * SPDX-FileCopyrightText: Copyright (C) 2025 Altera Corporation
+ *
+ * SPDX-License-Identifier: MIT
+ */
 #include "ff_sddisk.h"
 #include "ff_sys.h"
 #include "ff_socfpga.h"
