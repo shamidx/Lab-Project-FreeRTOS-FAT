@@ -1486,7 +1486,7 @@ uint32_t FF_FastCountFreeClusters( FF_IOManager_t * pxIOManager,
     if( pucBuffer == NULL )
     {
         FF_PRINTF( "FF_FastCountFreeClusters: malloc %u failed\n", ( unsigned ) uxBlockSize );
-        xError = FF_createERR( FF_ERR_NOT_ENOUGH_MEMORY, FF_FASTCOUNTFREECLUSTERS );
+        xError = FF_createERR( FF_ERR_NOT_ENOUGH_MEMORY, FF_FAST_COUNT_FREE_CLUSTERS );
     }
     else
     {
@@ -1524,7 +1524,7 @@ uint32_t FF_FastCountFreeClusters( FF_IOManager_t * pxIOManager,
 
             if( lRetVal < 0 )
             {
-                xError = FF_createERR( FF_ERR_DEVICE_DRIVER_FAILED, FF_FASTCOUNTFREECLUSTERS );
+                xError = FF_createERR( FF_ERR_DEVICE_DRIVER_FAILED, FF_FAST_COUNT_FREE_CLUSTERS );
                 break;
             }
 

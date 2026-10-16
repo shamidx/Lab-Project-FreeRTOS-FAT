@@ -491,7 +491,7 @@ FF_Buffer_t * FF_GetBuffer( FF_IOManager_t * pxIOManager,
             if( ( ucMode == FF_MODE_READ ) && ( pxMatchingBuffer->ucMode == FF_MODE_READ ) )
             {
                 pxMatchingBuffer->usNumHandles += 1;
-                pxMatchingBuffer->usPersistance += 1;
+                pxMatchingBuffer->usPersistence += 1;
 
                 break;
             }
@@ -508,7 +508,7 @@ FF_Buffer_t * FF_GetBuffer( FF_IOManager_t * pxIOManager,
                 }
 
                 pxMatchingBuffer->usNumHandles = 1;
-                pxMatchingBuffer->usPersistance += 1;
+                pxMatchingBuffer->usPersistence += 1;
                 break;
             }
 
@@ -534,7 +534,7 @@ FF_Buffer_t * FF_GetBuffer( FF_IOManager_t * pxIOManager,
 
                 if( ( pxRLUBuffer == NULL ) ||
                     ( pxBuffer->ulLRU > pxRLUBuffer->ulLRU ) ||
-                    ( ( pxBuffer->ulLRU == pxRLUBuffer->ulLRU ) && ( pxBuffer->usPersistance > pxRLUBuffer->usPersistance ) ) )
+                    ( ( pxBuffer->ulLRU == pxRLUBuffer->ulLRU ) && ( pxBuffer->usPersistence > pxRLUBuffer->usPersistence ) ) )
                 {
                     pxRLUBuffer = pxBuffer;
 
@@ -577,7 +577,7 @@ FF_Buffer_t * FF_GetBuffer( FF_IOManager_t * pxIOManager,
                 }
 
                 pxRLUBuffer->ucMode = ( ucMode & FF_MODE_RD_WR );
-                pxRLUBuffer->usPersistance = 1;
+                pxRLUBuffer->usPersistence = 1;
                 pxRLUBuffer->ulLRU = 0;
                 pxRLUBuffer->usNumHandles = 1;
                 pxRLUBuffer->ulSector = ulSector;

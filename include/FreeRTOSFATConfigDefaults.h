@@ -54,7 +54,7 @@
  *
  * Set to 0 not to use a CWD, in which case full paths must be used for each
  * file access. */
-    #define ffconfigHAS_CWD    1
+    #define ffconfigHAS_CWD    0
 
     #if !defined( ffconfigCWD_THREAD_LOCAL_INDEX )
         #error ffconfigCWD_THREAD_LOCAL_INDEX must be set to a free position within FreeRTOSs thread local storage pointer array for storage of a pointer to the CWD structure.
@@ -489,7 +489,7 @@
 
 /* A rarely used feature of FreeRTOS+FAT which lets files behave
  * as 'devices'. */
-    #define ffconfigDEV_SUPPORT    1
+    #define ffconfigDEV_SUPPORT    0
 #endif
 
 #ifndef USE_SOFT_WDT

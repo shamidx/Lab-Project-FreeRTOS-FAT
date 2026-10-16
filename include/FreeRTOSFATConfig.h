@@ -33,6 +33,8 @@
 
 #define ffconfigCWD_THREAD_LOCAL_INDEX    ( 0 )
 
+#define ffconfigHAS_CWD    1
+
 /* Note - must be deifined */
 #if !defined( portINLINE )
     #define portINLINE    __inline
